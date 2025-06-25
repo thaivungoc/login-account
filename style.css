@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+html, body {
+    height: 100%;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-logo {
+  width: 40px; 
+  height: auto;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(24, 103, 207);
+  border: 1px solid rgb(46, 112, 236);
+  padding: 15px 80px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.header-box h1 {
+    color: white;
+    font-style: italic;
+}
+.upgrade-btn,
+.signup-btn,
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: normal;
+  transition: 0.3s ease;
+}
+
+.upgrade-btn {
+  background-color: rgb(11, 182, 40);
+  color: black;
+}
+.upgrade-btn:hover {
+  background-color: rgb(114, 175, 23);
+  color: white;
+}
+
+.signup-btn {
+  background-color: rgb(35, 35, 231);
+  color: white;
+}
+.signup-btn:hover {
+  background-color: rgb(4, 4, 170);
+}
+
+.login-btn {
+  background-color: rgb(35, 35, 231);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.login-btn:hover {
+  background-color: rgb(5, 5, 180);
+}
+/* Icon style */
+.login-btn i {
+  font-size: 14px;
+}
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: block; /* KHÔNG dùng flex ở đây */
+}
+.page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px); /* Giả định header cao 70px */
+    padding: 0 10px;
+}
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(173, 216, 230, 0.3), rgba(173, 216, 230, 0.3)), url('./image/pexels-snapwire-6992.jpg');
+
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.container {
+    width: 490px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid grey;
+    backdrop-filter: blur(8px);
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.input-field {
+    position: relative;
+    border: 2px solid lightgrey;
+    margin: 15px 0;
+    padding-top: 14px; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.input-field input {
+    width: 100%;
+    height: 40px;
+    color: lightgray;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-top: 10px; 
+    padding-left: 2px;
+}
+
+.input-field label {
+    position: absolute;
+    color: blue;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 0.75rem;
+    top: 4px;
+    transform: translateY(0);
+    background-color: white; 
+    border-radius: 4px;
+}
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color:#fff;
+}
+#remember {
+    accent-color: #fff;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+.forget label p {
+    margin-left: 8px;
+}
+.container a {
+    color: lightgrey;
+    text-decoration: underline;
+}
+
+button {
+    background: #fff;
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
